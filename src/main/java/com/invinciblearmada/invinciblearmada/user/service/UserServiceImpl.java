@@ -8,7 +8,8 @@ import com.invinciblearmada.invinciblearmada.user.model.UserDto;
 
 public class UserServiceImpl implements UserService {
 
-	private UserDao userDao;
+	private static UserDao userDao;
+	private static UserService userService;
 	
 	public UserServiceImpl() {
 		if(userDao==null) {
@@ -16,6 +17,13 @@ public class UserServiceImpl implements UserService {
 		}
 	}
 
+	public static UserService getInstance() {
+		if(userService == null) {
+			userService = new UserServiceImpl();
+		}
+		return userService;
+	}
+	
 	@Override
 	public UserDto UserLogin(UserDto userDto) {
 		return userDao.UserLogin(userDto);

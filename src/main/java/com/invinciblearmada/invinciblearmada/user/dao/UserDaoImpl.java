@@ -7,8 +7,8 @@ import com.invinciblearmada.invinciblearmada.util.DBUtil;
 
 public class UserDaoImpl implements UserDao {
 
-	private UserDao userDao;
-	private DBUtil dbUtil;
+	private static UserDao userDao;
+	private static DBUtil dbUtil;
 	
 	public UserDaoImpl() {
 		if(dbUtil==null) {
@@ -16,9 +16,9 @@ public class UserDaoImpl implements UserDao {
 		}
 	}
 
-	public UserDaoImpl getInstance() {
+	public static UserDao getInstance() {
 		if(userDao ==null) {
-			userDao = 
+			userDao = new UserDaoImpl();
 		}
 		return userDao;
 	}
