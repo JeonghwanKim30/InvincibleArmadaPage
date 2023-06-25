@@ -11,7 +11,7 @@
 <style>
 .bg-image {
 	background-image:
-		url('https://images.unsplash.com/photo-1551958219-acbc608c6377?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80');
+		url('https://github.com/JeonghwanKim30/InvincibleArmadaPage/blob/main/build/classes/resources/loginPage001.jpg?raw=true');
 	/* 이미지 파일의 경로로 수정해주세요 */
 	background-size: cover;
 	background-position: center;
@@ -21,11 +21,14 @@
 <title>로그인 | 무적함대</title>
 </head>
 <body>
-	<div class="bg-image">
-		<form action="main" method="post">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-4 mx-auto">
+	<div class="bg-image opacity-50">
+		<div class="col-md-4 mx-auto">
+			<div class="mx-auto">
+				<img alt="" class="img-fluid img-thumbnail rounded-circle" src="https://github.com/JeonghwanKim30/InvincibleArmadaPage/blob/main/build/classes/resources/teamLogo001.png?raw=true">
+			</div>
+			<form action="main" method="post">
+				<div class="container">
+					<div class="row">
 						<div class="form-group">
 							<label for="login_id">회원아이디</label> <input type="text"
 								class="form-control" id="login_id" name="login_id"
@@ -49,8 +52,8 @@
 						</div>
 					</div>
 				</div>
-			</div>
-		</form>
+			</form>
+		</div>
 	</div>
 </body>
 </html>
