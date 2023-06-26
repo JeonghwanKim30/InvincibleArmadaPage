@@ -1,5 +1,6 @@
 package com.invinciblearmada.invinciblearmada.user.service;
 
+import java.sql.SQLException;
 import java.util.List;
 
 import com.invinciblearmada.invinciblearmada.user.dao.UserDao;
@@ -25,8 +26,8 @@ public class UserServiceImpl implements UserService {
 	}
 	
 	@Override
-	public UserDto UserLogin(UserDto userDto) {
-		return userDao.UserLogin(userDto);
+	public UserDto UserLogin(String userId, String userPw) throws SQLException {
+		return userDao.UserLogin(userId, userPw);
 	}
 
 	@Override
